@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Rocket</string>
+
+    <string name="com_auth0_client_id">IkvQxjt49MR9tdn1k00xVDaHmiDEmuKr</string>
+    <string name="com_auth0_domain">fsnd2022.us.auth0.com</string>
+    <string name="login">Log in</string>
+    <string name="logout">Log out</string>
+
+    <string name="slogan_name">Where can I Eat?</string>
+    <string name="search">search</string>
+    <string name="advanced_search">Advanced Search</string>
+    <string name="filter">filter</string>
+    <string name="vote">vote</string>
+    <string name="Reviews">Reviews</string>
+    <string name="add_comment_here">Add Comment here :)</string>
+    <string name="enter_code">Use A Code</string>
+
+    <string name="write_code_here">write code here</string>
+    <string name="Enter">Enter</string>
+
+    <string name="overall_rating">overall rating</string>
+    <string name="done">Done</string>
+
+    <string name="internetProblem">There is a problem in the connection</string>
+
+</resources>

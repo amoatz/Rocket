@@ -1,0 +1,916 @@
+{
+	"info": {
+		"_postman_id": "5d096106-3f4e-4dac-be2f-c5ad4603826f",
+		"name": "OMAC - Restaurants - HEROKU",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All - Users",
+			"item": [
+				{
+					"name": "all the restaurant list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by word",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/search/grill",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"search",
+								"grill"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by word with filter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/search/am/0/10/2/10/4/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"search",
+								"am",
+								"0",
+								"10",
+								"2",
+								"10",
+								"4",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "location by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/location/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"location",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "location by id (wrong)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(false);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/location/500",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"location",
+								"500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reviews by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Reviews/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Reviews",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reviews by id (wrong)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(false);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Reviews/200",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Reviews",
+								"200"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "codeCheck by review id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Codecheck/9531",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Codecheck",
+								"9531"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "codeCheck by review id (W)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(false);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Codecheck/2763345",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Codecheck",
+								"2763345"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "questions by location id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/questions/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"questions",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "questions by location id (wrong)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(false);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/questions/23333",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"questions",
+								"23333"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Ahmed\",\n    \"mail\": \"Ahmed@mail.com\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/register",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vote",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customerId\":\"5516672\",\n    \"vote\": \"1\",\n    \"locationId\":\"2\",\n    \"commentText\":\"Bad bad bad\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/vote",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"vote"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vote by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customerId\":\"5516672\",\n    \"vote\": \"1\",\n    \"locationId\":\"2\",\n    \"commentText\":\"Bad bad bad\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/vote/9531",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"vote",
+								"9531"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Questions Vote",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location_id\":\"3\",\n    \"customer_id\":\"1\",\n    \"questions\": [\n        {\n            \"question\":\"What did you think about our food?\",\n            \"rating\":\"4\"\n        },\n                {\n            \"question\":\"How would you rate our service?\",\n            \"rating\":\"5\"\n        },\n                {\n            \"question\":\"How would you rate the reservation process?\",\n            \"rating\":\"3\"\n        },\n                {\n            \"question\":\"Did our restaurant meet your standard of cleanliness and hygiene?\",\n            \"rating\":\"1\"\n        },\n                {\n            \"question\":\"What do you think about our restaurant's environment?\",\n            \"rating\":\"3\"\n        },\n                {\n            \"question\":\"How likely is it that you would come back?\",\n            \"rating\":\"3\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/questionsVote",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"questionsVote"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "restaurant",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"var jsonData = JSON.parse(responseBody); ",
+									"",
+									"pm.collectionVariables.set(\"id\", jsonData.id);",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Lounge Cafè Italiano\",\n    \"formatted_adress\": \"7 Academic City Road Ground Floor, Arenco Tower Dubai Media City, Dubai United Arab Emirates\",\n    \"formatted_phone_number\": \" +971 4 317 2221\",\n    \"geomtry\": \"\",\n    \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/1d/7d/42/fa/carbonara.jpg\",\n    \"rating\": \"3.9\",\n    \"website\": \"https://loungecafeitaliano.com/\",\n    \"place_id\": \"550\",\n\n    \"one_star\": \"3\",\n    \"two_star\": \"50\",\n    \"three_star\": \"210\",\n    \"four_star\": \"200\",\n    \"five_star\": \"100\",\n\n    \"city\": \"Dubai\",\n    \"zone\": \"Arenco Tower Dubai Media City\",\n\n    \"type\":\"Italian,Pizza,Cafe\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/add",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List of restaurants",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"restaurants\":[\n    {\n        \"name\":\"Fish Market\",\n        \"formatted_adress\":\"Baniyas Road Baniyas Road, Deira, Dubai 476 United Arab Emirates\",\n        \"formatted_phone_number\":\"+971 4 388 2278\",\n        \"geomtry\":\"\",\n        \"icon\":\"https://media-cdn.tripadvisor.com/media/photo-s/11/7c/0d/6b/fish-market-interior.jpg\",\n        \"rating\":\"3.1\",\n        \"website\":\"\",\n        \"place_id\":\"550\",\n        \"one_star\":\"40\",\n        \"two_star\":\"49\",\n        \"three_star\":\"56\",\n        \"four_star\":\"65\",\n        \"five_star\":\"51\",\n        \"city\":\"Dubai\",\n        \"zone\":\"Deira\",\n        \"type\":\"Seafood, Vegetarian, FriendlyVegan Options\"\n    }\n    ]    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/addlist",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"addlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restaurant",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/deleterest/26",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"deleterest",
+								"26"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rock - users",
+			"item": [
+				{
+					"name": "CodeGenerator by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/CodeGenerator/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"CodeGenerator",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CodeGenerator by id (wrong)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(false);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/CodeGenerator/2000",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"CodeGenerator",
+								"2000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Questions",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location_id\":\"3\",\n    \"questions\": [\n        {\n            \"question\":\"What did you think about our food?\"\n        },\n                {\n            \"question\":\"How would you rate our service?\"\n        },\n                {\n            \"question\":\"How would you rate the reservation process?\"\n        },\n                {\n            \"question\":\"Did our restaurant meet your standard of cleanliness and hygiene?\"\n        },\n                {\n            \"question\":\"What do you think about our restaurant's environment?\"\n        },\n                {\n            \"question\":\"How likely is it that you would come back?\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/questions",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"questions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "https://rocket-app-heroku.herokuapp.com"
+		},
+		{
+			"key": "id",
+			"value": ""
+		}
+	]
+}

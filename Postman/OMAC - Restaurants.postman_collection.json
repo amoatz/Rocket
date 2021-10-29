@@ -1,0 +1,916 @@
+{
+	"info": {
+		"_postman_id": "89234114-c70c-4c5c-9413-7974da693ca6",
+		"name": "OMAC - Restaurants",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All - Users",
+			"item": [
+				{
+					"name": "all the restaurant list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by word",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/search/grill",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"search",
+								"grill"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by word with filter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/search/am/0/10/2/10/4/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"search",
+								"am",
+								"0",
+								"10",
+								"2",
+								"10",
+								"4",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "location by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/location/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"location",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "location by id (wrong)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(false);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/location/500",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"location",
+								"500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reviews by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Reviews/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Reviews",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reviews by id (wrong)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(false);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Reviews/200",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Reviews",
+								"200"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "codeCheck by review id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Codecheck/2763",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Codecheck",
+								"2763"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "codeCheck by review id (W)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/Codecheck/2763345",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"Codecheck",
+								"2763345"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "questions by location id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/questions/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"questions",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "questions by location id (wrong)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/questions/23333",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"questions",
+								"23333"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Ahmed\",\n    \"mail\": \"Ahmed@mail.com\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/register",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vote",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customerId\":\"5516672\",\n    \"vote\": \"1\",\n    \"locationId\":\"2\",\n    \"commentText\":\"Bad bad bad\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/vote",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"vote"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vote by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customerId\":\"5516672\",\n    \"vote\": \"1\",\n    \"locationId\":\"2\",\n    \"commentText\":\"Bad bad bad\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/vote/2833",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"vote",
+								"2833"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Questions Vote",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location_id\":\"2\",\n    \"customer_id\":\"92843\",\n    \"questions\": [\n        {\n            \"question\":\"What did you think about our food?\",\n            \"rating\":\"4\"\n        },\n                {\n            \"question\":\"How would you rate our service?\",\n            \"rating\":\"5\"\n        },\n                {\n            \"question\":\"How would you rate the reservation process?\",\n            \"rating\":\"3\"\n        },\n                {\n            \"question\":\"Did our restaurant meet your standard of cleanliness and hygiene?\",\n            \"rating\":\"1\"\n        },\n                {\n            \"question\":\"What do you think about our restaurant's environment?\",\n            \"rating\":\"3\"\n        },\n                {\n            \"question\":\"How likely is it that you would come back?\",\n            \"rating\":\"3\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/questionsVote",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"questionsVote"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "restaurant",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"var jsonData = JSON.parse(responseBody); ",
+									"",
+									"pm.collectionVariables.set(\"id\", jsonData.id);",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Manhattan Grill\",\n    \"formatted_adress\": \"Sheikh Rashid Rd, Riyadh St, Dubai 7978 United Arab Emirates\",\n    \"formatted_phone_number\": \" +971 4 317 2221\",\n    \"geomtry\": \"\",\n    \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/04/11/07/25/manhattan-grill.jpg\",\n    \"rating\": \"3.9\",\n    \"website\": \"\",\n    \"place_id\": \"550\",\n\n    \"one_star\": \"3\",\n    \"two_star\": \"50\",\n    \"three_star\": \"210\",\n    \"four_star\": \"200\",\n    \"five_star\": \"100\",\n\n    \"city\": \"Dubai\",\n    \"zone\": \"Riyadh St\",\n\n    \"type\":\"Steakhouse,Fusion,Halal\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/add",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List of restaurants",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"restaurants\":[\n    {\n        \"name\":\"Zam Zam Mandi\",\n        \"formatted_adress\":\"Fashion Avenue , P1 parking, Dubai Mall - Dubai - United Arab Emirates\",\n        \"formatted_phone_number\":\"+971 4 388 2278\",\n        \"geomtry\":\"\",\n        \"icon\":\"https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80\",\n        \"rating\":\"3.1\",\n        \"website\":\"\",\n        \"place_id\":\"550\",\n        \"one_star\":\"40\",\n        \"two_star\":\"49\",\n        \"three_star\":\"56\",\n        \"four_star\":\"65\",\n        \"five_star\":\"51\",\n        \"city\":\"Dubai\",\n        \"zone\":\"Dubai Mall\",\n        \"type\":\"Fast Food\"\n    },\n    {\n        \"name\":\"The Grill Shack\",\n        \"formatted_adress\":\"Financial Center Rd - Downtown Dubai - Dubai - United Arab Emirates\",\n        \"formatted_phone_number\":\"+971 4 388 2382\",\n        \"geomtry\":\"\",\n        \"icon\": \"https://assets.website-files.com/5f17df844aa1828cfb25bd26/5f3cea81945b0118b394a394_2.jpg\",\n        \"rating\":\"4.4\",\n        \"website\":\"https://www.thegrilllshack.com\",\n        \"place_id\":\"550\",\n        \"one_star\":\"3\",\n        \"two_star\":\"5\",\n        \"three_star\":\"100\",\n        \"four_star\":\"201\",\n        \"five_star\":\"400\",\n        \"city\":\"Dubai\",\n        \"zone\":\"Dubai Mall\",\n        \"type\":\"American, Steakhouse, Barbecue\"\n    },\n    {\n        \"name\":\"The Grill Restaurant\",\n        \"formatted_adress\":\"4664+QJX - Al Barsha - Al Barsha 1 - Dubai - United Arab Emirates\",\n        \"formatted_phone_number\":\" +971 4 354 9994\",\n        \"geomtry\":\"\",\n        \"icon\":\"https://assets.website-files.com/5f17df844aa1828cfb25bd26/5f3cea80f51c3f08f722aaff_7.jpg\",\n        \"rating\":\"4.1\",\n        \"website\":\"\",\n        \"place_id\":\"550\",\n        \"one_star\":\"3\",\n        \"two_star\":\"10\",\n        \"three_star\":\"210\",\n        \"four_star\":\"200\",\n        \"five_star\":\"300\",\n        \"city\":\"Dubai\",\n        \"zone\":\"Al Barsha\",\n        \"type\":\"Steakhouse, Barbecue\"\n    },\n    {\n        \"name\":\"The Beach Bar & Grill \",\n        \"formatted_adress\":\"Al Sufouh Rd The Palace at One&Only Royal Mirage, Dubai, Dubai 37252 United Arab Emirates \",\n        \"formatted_phone_number\":\" +971 4 399 9999\",\n        \"geomtry\":\"\",\n        \"icon\":\"https://www.oneandonlyresorts.com/scropper/-/screen/4096/oneandonly/royal-mirage/dining/the-beach-bar-and-grill/oorm-beach-bar-grill-food-1.jpg \",\n        \"rating\":\"3.9\",\n        \"website\":\"https://www.thebeachbarandgrill.com.au\",\n        \"place_id\":\"550\",\n        \"one_star\":\"3\",\n        \"two_star\":\"10\",\n        \"three_star\":\"210\",\n        \"four_star\":\"200\",\n        \"five_star\":\"200\",\n        \"city\":\"Dubai\",\n        \"zone\":\"In The Palace\",\n        \"type\":\"SeafoodMediterraneanEuropean\"\n    },\n    {\n        \"name\":\"The Queens Grill \",\n        \"formatted_adress\":\"Mina Rashid, Dubai United Arab Emirates\",\n        \"formatted_phone_number\":\" +971 4 526 8888\",\n        \"geomtry\":\"\",\n        \"icon\":\"https://media-cdn.tripadvisor.com/media/photo-s/1a/fa/fc/93/queen-s-grill-restaurant.jpg\",\"rating\":\"3.7\",\"website\":\"https://www.qe2.com/en/restaurants/queens-grill/\",\n        \"place_id\":\"550\",\n        \"one_star\":\"3\",\n        \"two_star\":\"10\",\n        \"three_star\":\"210\",\n        \"four_star\":\"200\",\n        \"five_star\":\"100\",\n        \"city\":\"Dubai \",\n        \"zone\":\"Mina Rashid\",\n        \"type\":\"Mediterranean,European,British\"\n    },\n    {\n        \"name\":\"Argentina Grill\",\n        \"formatted_adress\":\"LaMer, Jumeirah 1, Dubai United Arab Emirates \",\n        \"formatted_phone_number\":\" +971 4 597 3726\",\n        \"geomtry\":\"\",\n        \"icon\":\"https://media-cdn.tripadvisor.com/media/photo-s/1c/9a/c8/8e/argentina-grill.jpg \",\"rating\":\"3.6\",\"website\":\"https://argentinagrill.rest\",\n        \"place_id\":\"550\",\n        \"one_star\":\"3\",\n        \"two_star\":\"70\",\n        \"three_star\":\"210\",\n        \"four_star\":\"400\",\n        \"five_star\":\"59\",\n        \"city\":\"Dubai\",\n        \"zone\":\"Jumeirah \",\n        \"type\":\"Steakhouse,Latin,Barbecue\"\n    },\n    {\n        \"name\":\"Manhattan Grill\",\n        \"formatted_adress\":\"Sheikh Rashid Rd, Riyadh St, Dubai 7978 United Arab Emirates\",\n        \"formatted_phone_number\":\"+971 4 317 2221\",\n        \"geomtry\":\"\",\n        \"icon\":\"https://media-cdn.tripadvisor.com/media/photo-s/04/11/07/25/manhattan-grill.jpg\",\n        \"rating\":\"4.7\",\n        \"website\":\"https://www.hyattrestaurants.com/en/dining/uae/dubai/steakhouse-restaurant-in-oud-metha-manhattan-grill?utm_source=gmblisting_dxbgh&utm_medium=manhattan&utm_campaign=GMB\",\n        \"place_id\":\"550\",\n        \"one_star\":\"3\",\n        \"two_star\":\"4\",\n        \"three_star\":\"34\",\n        \"four_star\":\"200\",\n        \"five_star\":\"600\",\n        \"city\":\"Dubai\",\n        \"zone\":\"Riyadh St\",\n        \"type\":\"Steakhouse,Fusion,Halal\"\n    }\n    ]    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/addlist",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"addlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restaurant",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/deleterest/26",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"deleterest",
+								"26"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rock - users",
+			"item": [
+				{
+					"name": "CodeGenerator by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/CodeGenerator/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"CodeGenerator",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CodeGenerator by id (wrong)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(false);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/CodeGenerator/2000",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"CodeGenerator",
+								"2000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Questions",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"success test\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.success).to.eql(true);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"location_id\":\"2\",\n    \"questions\": [\n        {\n            \"question\":\"What did you think about our food?\"\n        },\n                {\n            \"question\":\"How would you rate our service?\"\n        },\n                {\n            \"question\":\"How would you rate the reservation process?\"\n        },\n                {\n            \"question\":\"Did our restaurant meet your standard of cleanliness and hygiene?\"\n        },\n                {\n            \"question\":\"What do you think about our restaurant's environment?\"\n        },\n                {\n            \"question\":\"How likely is it that you would come back?\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/questions",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"questions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://127.0.0.1:5000"
+		},
+		{
+			"key": "id",
+			"value": ""
+		}
+	]
+}

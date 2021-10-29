@@ -1,0 +1,48 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Rocket" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/PrimaryText</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
+<!--        <item name="colorOnPrimarySurface">@color/PrimaryText</item>-->
+<!--        <item name="colorSurface">@color/PrimaryText</item>-->
+<!--        <item name="colorOnSurface">@color/PrimaryText</item>-->
+
+<!--        <item name="android:textColorPrimary">@color/PrimaryText</item>-->
+<!--        <item name="android:textColor">@color/PrimaryText</item>-->
+
+        <item name="textAppearanceHeadline6">@style/TextAppearance.App.Headline6</item>
+
+
+
+
+
+
+
+        <!--        <item name="textAppearanceHeadline1">@color/PrimaryText</item>-->
+<!--        <item name="textAppearanceHeadline2">@color/PrimaryText</item>-->
+<!--        <item name="textAppearanceHeadline3">@color/PrimaryText</item>-->
+<!--        <item name="textAppearanceHeadline4">@color/PrimaryText</item>-->
+<!--        <item name="textAppearanceHeadline5">@color/PrimaryText</item>-->
+<!--        <item name="textAppearanceHeadline6">@color/PrimaryText</item>-->
+
+<!--        <item name="textAppearanceSubtitle1">@color/PrimaryText</item>-->
+<!--        <item name="textAppearanceSubtitle2">@color/PrimaryText</item>-->
+<!--        <item name="textAppearanceBody1">@color/PrimaryText</item>-->
+<!--        <item name="textAppearanceBody2">@color/PrimaryText</item>-->
+<!--        <item name="textAppearanceCaption">@color/PrimaryText</item>-->
+<!--        <item name="textAppearanceButton">@color/PrimaryText</item>-->
+<!--        <item name="textAppearanceOverline">@color/PrimaryText</item>-->
+
+
+    </style>
+</resources>

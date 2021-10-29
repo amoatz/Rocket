@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Rock</string>
+    <string name="rocket">Rock</string>
+
+    <string name="com_auth0_client_id"></string>
+    <string name="com_auth0_domain"></string>
+    <string name="login">Log in</string>
+    <string name="logout">Log out</string>
+
+    <string name="slogan_name">customer keeper</string>
+    <string name="search">search</string>
+    <string name="advanced_search">Advanced Search</string>
+    <string name="filter">filter</string>
+    <string name="vote">vote</string>
+    <string name="Reviews">Reviews</string>
+    <string name="add_comment_here">Add Comment here :)</string>
+    <string name="enter_code">Use A Code</string>
+
+    <string name="write_code_here">write code here</string>
+    <string name="location_id">location ID</string>
+    <string name="Enter">Enter</string>
+
+    <string name="generate_code">Generate Code</string>
+    <string name="setting">setting</string>
+
+    <string name="delete">delete</string>
+    <string name="new_question">New Question</string>
+    <string name="add">add</string>
+    <string name="done">done</string>
+
+
+</resources>
